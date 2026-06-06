@@ -70,24 +70,24 @@ public class App {
         datosEmpresa = new GestionDatos();
         try {
             // Crear Gerente
-            Gerente gerente = new Gerente(datosEmpresa.generarIdEmpleado(), "Carlos ", "Gerente", 5000, 1000, 50000);
+            Gerente gerente = new Gerente(datosEmpresa.generarIdEmpleado(), "Monserrat González Solis ", "Gerente", 15000, 45000, 250000);
             datosEmpresa.agregarEmpleado(gerente);
 
             // Crear Jefe
-            JefeDepartamento jefe = new JefeDepartamento(datosEmpresa.generarIdEmpleado(), "Ana", 4000, 500);
+            JefeDepartamento jefe = new JefeDepartamento(datosEmpresa.generarIdEmpleado(), "Jhostin Dilver Guevara Acevedo", 12000, 5000);
             datosEmpresa.agregarEmpleado(jefe);
 
             // Crear Departamento
-            Departamento depto = new Departamento(datosEmpresa.generarIdDepartamento(), "IT", "Departamento de Tecnología", 0); 
+            Departamento depto = new Departamento(datosEmpresa.generarIdDepartamento(), "Tecnología", "Departamento de Tecnología", 0); 
             depto.setJefe(jefe);
             jefe.setDepartamento(depto);
             datosEmpresa.agregarDepartamento(depto);
             gerente.agregarDepto(depto);
 
             // Crear 3 Desarrolladores
-            Desarrollador d1 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Luis", 3000, "Java");
-            Desarrollador d2 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Marta", 3200, "Python");
-            Desarrollador d3 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Pedro", 2800, "C++");
+            Desarrollador d1 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Andres Yánez Gudiño", 9800, "Java");
+            Desarrollador d2 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Felipe Aarón Urzúa Olais", 9000, "Python");
+            Desarrollador d3 = new Desarrollador(datosEmpresa.generarIdEmpleado(), "Linus Torvalds", 13000, "C");
             datosEmpresa.agregarEmpleado(d1);
             datosEmpresa.agregarEmpleado(d2);
             datosEmpresa.agregarEmpleado(d3);
@@ -101,7 +101,7 @@ public class App {
             jefe.agregarEmpleadoEquipo(d3);
 
             // Crear Proyecto
-            Proyecto proy = new Proyecto(datosEmpresa.generarIdProyecto(), "Sistema Nuevo", "Migracion de sistema", LocalDate.of(2026, 1, 1), LocalDate.of(2026, 12, 31));
+            Proyecto proy = new Proyecto(datosEmpresa.generarIdProyecto(), "Lazarus", "Implementación de medidas de seguridad de los datos.", LocalDate.of(2026, 5, 30), LocalDate.of(2026, 12, 31));
             proy.agregarEmpleado(d1);
             proy.agregarEmpleado(d2);
             gerente.agregarProyecto(proy);
